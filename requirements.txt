@@ -8,4 +8,4 @@ streamlit
 joblib
 plotly
 gTTS
-pydub
+
