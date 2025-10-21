@@ -61,5 +61,30 @@ AmbiWorld busca hacer accesible y visual la comprensión de las múltiples acepc
 Apoya tanto a estudiantes de chino como a investigadores en procesamiento de lenguaje natural.
 
 ---
+🎧 Archivos de audio
+
+Solo se incluyen dos audios de ejemplo por motivos de espacio.
+Los audios completos utilizados en la versión original del proyecto pueden solicitarse a la autora o consultarse en la carpeta privada del repositorio.
+
+🔍 Posibles Aplicaciones
+	•	Aprendizaje de idiomas asistido por IA.
+	•	Mejora de traductores automáticos multilingües.
+	•	Clasificación semántica de texto.
+	•	Modelos de comprensión del lenguaje aplicados a la educación.
+
+⸻
+
+👩‍💻 Autora
 
 Tatiana Beresaluze García
+Estratega en Inteligencia Artificial, Innovación y Marketing Digital
+📧 tatiana.beresaluze@gmail.com
+
+
+⸻
+
+🧭 Licencia
+
+Este proyecto se publica con fines educativos y de investigación.
+Licencia: MIT License © 2025 Tatiana Beresaluze
+
