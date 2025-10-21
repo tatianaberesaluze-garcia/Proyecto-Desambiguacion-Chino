@@ -98,7 +98,24 @@ Proyecto-Desambiguacion-Chino/
 
 ---
 
-## 🚀 Cómo Ejecutar el Proyecto  
+
+ 
+Requisitos de instalación:
+
+pip install streamlit plotly pandas numpy
+
+---
+
+## ¿Cómo ejecutar la aplicación?
+
+1. Coloca el archivo ambiworld_app.py y archivos con datos.csv en el mismo directorio.
+2. Abre tu terminal o consola.
+3. Ejecuta:
+
+streamlit run ambiworld_app.py
+
+4. Se abrirá automáticamente en el navegador predeterminado (http://localhost:8501).
+
 
 
 
