@@ -88,7 +88,7 @@ Proyecto-Desambiguacion-Chino/
 ├── models/                             ← Modelos entrenados
 │   └── modelo_desambiguacion.joblib
 │
-├── docs/                               ← Presentaciones y documentación
+├── docs/                               ← Presentaciones y documentación 
 │   ├── Presentacion_Proyecto.pdf
 │   └── README_TECNICO.md
 │
@@ -100,21 +100,7 @@ Proyecto-Desambiguacion-Chino/
 
 ## 🚀 Cómo Ejecutar el Proyecto  
 
-Sigue estos pasos para clonar el repositorio, instalar las dependencias y ejecutar la aplicación **AmbiWorld**:
 
-1️⃣ **Clonar el repositorio**  
-Descarga una copia local del proyecto desde GitHub:  
-```bash
-git clone https://github.com/tatianaberesaluze/Proyecto-Desambiguacion-Chino.git
-cd Proyecto-Desambiguacion-Chino
-
-2️⃣ Instalar las dependencias
-pip install -r requirements.txt
-
-3️⃣ Ejecutar la aplicación Streamlit
-streamlit run app/ambiworld_app.py
-
-💡 Una vez ejecutado este comando, se abrirá una pestaña en tu navegador (por defecto en http://localhost:8501) donde podrás interactuar con el modelo y probar la predicción de significados.
 
 🎧 Archivos de audio
 
