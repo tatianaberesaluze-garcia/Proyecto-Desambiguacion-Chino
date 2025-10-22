@@ -1,0 +1,23 @@
+import pandas as pd
+from gtts import gTTS
+import os
+
+# Cargar el archivo de datos
+df = pd.read_csv("datos.csv")
+
+# Crear carpeta de audios si no existe
+audio_dir = "audio"
+os.makedirs(audio_dir, exist_ok=True)
+
+# Generar un audio por palabra (única)
+palabras = df['palabra'].unique()
+
+for palabra in palabras:
+    path = os.path.join(audio_dir, f"{palabra}.mp3")
+    if not os.path.exists(path):
+        try:
+            tts = gTTS(text=palabra, lang='zh')
+            tts.save(path)
+            print(f" Audio generado: {palabra}")
+        except Exception as e:
+            print(f"Error con {palabra}: {e}")
