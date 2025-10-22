@@ -35,6 +35,16 @@ datos.csv                # Dataset de palabras ambiguas y ejemplos
 Audio                    # carpeta de audios generados
 imagenes/                #  futuras extensiones visuales
 
+## 🧠 Archivos del modelo entrenado
+
+El proyecto incluye dos archivos esenciales para el funcionamiento de la aplicación **AmbiWorld**, ubicados en la carpeta `/app/`:
+
+| Archivo | Descripción | Función |
+|----------|--------------|----------|
+| `modelo_clase_gr.pkl` | Modelo de IA entrenado mediante técnicas de *Machine Learning* para predecir el significado contextual de palabras chinas ambiguas. | Realiza la clasificación semántica en la aplicación. |
+| `vectorizer_clase_gr.pkl` | Vectorizador de texto (TF-IDF o similar) utilizado durante el entrenamiento. Convierte las frases en vectores numéricos compatibles con el modelo. | Preprocesa los textos de entrada antes de la predicción. |
+
+⚠️ Ambos archivos son **necesarios** para que la aplicación funcione correctamente.
 ---
 
  Requisitos de instalación
@@ -61,10 +71,15 @@ AmbiWorld busca hacer accesible y visual la comprensión de las múltiples acepc
 Apoya tanto a estudiantes de chino como a investigadores en procesamiento de lenguaje natural.
 
 ---
-🎧 Archivos de audio
+## 🔊 Archivos de audio
 
-Solo se incluyen dos audios de ejemplo por motivos de espacio.
-Los audios completos utilizados en la versión original del proyecto pueden solicitarse a la autora o consultarse en la carpeta privada del repositorio.
+La aplicación incluye audios de pronunciación en chino mandarín asociados a cada palabra ambigua.  
+Los detalles técnicos (formato, estructura y descarga) están documentados en:
+
+👉 [readme-audios](app/audios/readme-audios)
+
+Solo se incluyen cien audios de ejemplo.
+Los audios completos utilizados en la versión original del proyecto pueden solicitarse a la autora.
 
 🔍 Posibles Aplicaciones
 	•	Aprendizaje de idiomas asistido por IA.
