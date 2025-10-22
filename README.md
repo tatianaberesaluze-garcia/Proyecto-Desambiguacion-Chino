@@ -63,19 +63,22 @@ El proyecto culmina con **AmbiWorld**, una aplicación interactiva desarrollada 
 Proyecto-Desambiguacion-Chino/
 ├── app/                                ← Aplicación Streamlit (AmbiWorld)
 │   ├── ambiworld_app.py                ← Código principal de la app
-│   └── audio/                          ← Audios de ejemplo
-│       ├── ejemplo_pronunciacion_1.mp3
-│       └── ejemplo_pronunciacion_2.mp3
-│
-├── data/                               ← Archivos de datos
+│   └── audio/                          ← Audios de ejemplo (100)
+│       data/                               ← Archivos de datos
 │   ├── app_data/                       ← Datos que usa la app AmbiWorld
 │   │   └── datos.csv
-│   ├── project_data/                   ← Datasets para entrenamiento y validación
+├── project_data/                   ← Datasets para entrenamiento y validación
 │   │   ├── top_300_ambiguas_completo.csv
 │   │   ├── frases_enriquecidas.csv
 │   │   ├── frases_etiquetadas.csv
 │   │   ├── frases_etiquetadas_corregidas.csv
+│   │   ├── frases_traducidas_500.csv
 │   │   └── frases_fusionadas.csv
+ │   │   └── sentences.csv              ← Archivo original del corpus multilingüe **Tatoeba**, con millones de frases y metadatos de idioma. Debido a su gran tamaño, **no se incluye en este repositorio**, pero se utilizó como fuente principal de datos para el filtrado. | Fuente de datos original (no incluida por limitaciones de tamaño). 
+> Se encuentra disponible públicamente en [https://tatoeba.org](https://tatoeba.org) y fue utilizado únicamente como fuente de extracción.
+ │   │   └── sentences_es_300.csv       ←  Subconjunto con frases exclusivamente en **español**. 
+│   │   └── sentences_zh_300.csv        ← Subconjunto con frases exclusivamente en **chino mandarín**.  del archivo original del corpus multilingüe **Tatoeba**
+		
 │   └── dictionaries/                   ← Diccionarios base
 │       ├── cedict_0_0_ts_utf-8_mdbg_20250424_130919.txt
 │       └── dict.txt
@@ -87,9 +90,12 @@ Proyecto-Desambiguacion-Chino/
 │
 ├── models/                             ← Modelos entrenados
 │   └── modelo_desambiguacion.joblib
+│   └── modelo_clase_gr.pkl            ← Modelo de IA entrenado mediante técnicas de *Machine Learning* para predecir el significado contextual de palabras chinas ambiguas. | Realiza la clasificación semántica en la aplicación. 
+│   └── vectorizer_clase_gr.pkl       ← Vectorizador de texto (TF-IDF o similar) utilizado durante el entrenamiento. Convierte las frases en vectores numéricos compatibles con el modelo. | Preprocesa los textos de entrada antes de la predicción. |
+⚠️ Ambos archivos son **necesarios** para que la aplicación funcione correctamente.
 │
 ├── docs/                               ← Presentaciones y documentación 
-│   ├── Presentacion_Proyecto.pdf
+│   ├── Presentacion_Proyecto.pdf  **no se incluye en este repositorio**,
 │   └── README_TECNICO.md
 │
 ├── requirements.txt                    ← Dependencias del proyecto
@@ -121,8 +127,13 @@ streamlit run ambiworld_app.py
 
 🎧 Archivos de audio
 
-Solo se incluyen dos audios de ejemplo por motivos de espacio.
-Los audios completos utilizados en la versión original del proyecto pueden solicitarse a la autora o consultarse en la carpeta privada del repositorio.
+La aplicación incluye audios en formato `.mp3` con pronunciaciones en **chino mandarín**, asociados a cada palabra ambigua.  
+Estos archivos permiten escuchar la palabra y su pinyin dentro de la app AmbiWorld.
+
+📂 Carpeta: `/app/audio/`  
+🎧 Detalles técnicos y enlace de descarga: [readme-audios](app/audio/readme-audios)
+Se incluyen cien audios de ejemplo.
+Los audios completos utilizados en la versión original del proyecto pueden solicitarse a la autora.
 
 🔍 Posibles Aplicaciones
 	•	Aprendizaje de idiomas asistido por IA.
