@@ -33,7 +33,7 @@ def try_play_audio(row):
 
     # 2) Cualquier subcarpeta dentro de audio/ (audios1, audios2, audios3…)
     if AUDIO_DIR.exists():
-        for encontrado in AUDIO_DIR.rglob(fname):
+        for encontrado in APP_DIR.rglob(fname):
             etiqueta = row.get('pinyin', row['palabra'])
             st.caption(f"🔊 Pronunciación: {etiqueta}")
             st.audio(str(encontrado), format="audio/mp3")
